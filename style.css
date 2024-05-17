@@ -1,12 +1,11 @@
 @media print {
-  body {
-      -webkit-print-color-adjust: exact;
-  }
-
-  img {
-      display: block; /* Ensures images are not hidden */
-      max-width: 100%; /* Optional: scales images to fit the page */
-  }
+    body {
+        -webkit-print-color-adjust: exact;
+    }
+    img {
+        display: block;
+        max-width: 100%;
+    }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700;900&display=swap');
@@ -32,7 +31,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 200px;
+    padding: 20px; /* Updated padding */
     background-color: #f4637b;
 }
 
@@ -40,7 +39,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     list-style: none;
 }
 
@@ -48,10 +47,10 @@ body {
     text-decoration: none;
     color: #2a2a2a;
     font-weight: 600;
-    transition: all 2000ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
-ul a .active {
+ul a.active {
     color: #f4637b;
 }
 
@@ -61,20 +60,20 @@ ul a .active {
 
 .main {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 6rem;
+    gap: 2rem; /* Reduced gap */
     margin-top: 70px;
     color: #f4637b;
+    padding: 0 20px; /* Updated padding */
 }
 
-main .cynthia {
-    width: 500px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    /* Set a maximum width if necessary */
+.cynthia {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
-/* CSS Styles */
 .portfolio-content {
     text-align: center;
 }
@@ -82,135 +81,102 @@ main .cynthia {
 .pdf-link a {
     font-weight: bold;
     color: red;
-    font-size: 30px;
+    font-size: 3rem; /* Updated font size */
+    margin-top: 1rem;
 }
 
 .project-title {
-
-    font-size: 30px; /* Adjust the font size as needed */
+    font-size: 30px; /* Keep the title size the same */
     font-weight: bold;
-    position: absolute;
-    top: 950px; /* Adjust the top position as needed */
-    left: 40px; /* Adjust the left position as needed */
-    color: white; /* Adjust the color as needed */
-    z-index: 1; /* Ensure the title is above the image */
-}
-
-.game-design-title {
-    position: relative; /* Use relative positioning to contain the absolute positioning of the h3 */
-    margin-top: 10%; /* Adjust margin at the top */
+    color: white;
+    position: relative;
+    margin-bottom: 5rem;
 }
 
 .game-design-title h3 {
-    position: absolute; /* Use absolute positioning for precise control */
-    top: -45px; /* Adjust as needed */
-    left: 0; /* Align to the left */
-    font-size: 30px; /* Adjust the font size as needed */
-    font-weight: bold;
-    color: #ffffff; /* Adjust the color as needed */
-    margin: 0; /* Remove default margin */
-    text-decoration: none; /* Remove any underlines */
-    z-index: 1; /* Ensure the title is above other elements */
+    color: white;
+    font-size: 2rem; /* Updated font size */
+    margin-bottom: 7rem;
+    margin-top: 10rem;
 }
 
-
 .video-section {
-    margin-top: 10px;
-    margin-bottom: 200px; /* Add margin bottom to create space between projects */
+    margin-top: 50px;
+    margin-bottom: 2rem; /* Updated margin */
 }
 
 .web-design {
-    margin-top: 50px; /* Adjust as needed */
-}
-
-.Web.design {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align the video horizontally */
-    width: 100%; /* Adjust as needed */
+    margin-top: 10rem;
 }
 
 .Web.design h5 {
-    position: absolute; /* Use absolute positioning for precise control */
-    top: -45px; /* Adjust as needed */
-    left: 0px; /* Align to the left */
-    margin: 0; /* Remove default margin */
-    font-size: 30px; /* Adjust as needed */
-    font-weight: bold;
-    color: #ffffff; /* Adjust as needed */
-    z-index: 1; /* Ensure the title is above other elements */
-    text-decoration: none; /* Remove underline */
+    font-size: 2rem; /* Updated font size */
+    color: white;
+    margin-bottom: 2rem;
 }
 
 .Web.design iframe {
-    width: 900px; /* Set a fixed width for the video */
-    height: 506px; /* Set a fixed height for the video */
-}
-
-
-
-.information-design-title {
-    margin-top: 18%;
+  width: 900px; /* Set a fixed width for the iframe to match the Game Design video */
+  max-width: 100%; /* Ensure responsiveness */
+  height: 506px;
 }
 
 .information-design-title h3 {
-    position: absolute;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 30px;
-    bottom: -250%; /* Adjust as needed */
-    left: 50px; /* Adjust as needed */
-    margin: 0;
-    z-index: 1;
+    font-size: 1.5rem; /* Updated font size */
+    margin-bottom: 5rem;
+    margin-top: 10rem;
+    color: white;
 }
-
+.image-section {
+  margin-bottom: 5rem;
+}
 .project-section {
     margin-bottom: 50px; /* Add space between projects */
 }
 
 .pdf-link h2 {
-    font-size: 24px; /* Increase font size for the "Click here for the full presentation" title */
+    font-size: 1.2rem; /* Updated font size */
 }
 
 @media screen and (max-width: 768px) {
-    .welcome, .project-title, .game-design-title, .information-design-title h3 {
-        font-size: 30px; /* Decrease font size for mobile */
-        text-decoration: none; /* Remove underline */
-        position: static; /* Center over projects */
-        margin: 10px auto; /* Center horizontally with some margin */
+    .nav {
+        padding: 10px; /* Updated padding */
     }
-    .portfolio-content .caption {
-        font-size: 30px; /* Caption font size */
-        color: #777; /* Caption color */
-        margin-bottom: 10px; /* Margin between caption and project */
-        text-align: center; /* Center align caption */
+
+    .nav .link ul {
+        gap: 0.5rem;
+    }
+
+    .main {
+        padding: 0 10px; /* Updated padding */
+    }
+
+    .cynthia {
+        max-width: 100%;
+    }
+
+    .pdf-link a {
+        font-size: 1rem; /* Updated font size */
+    }
+
+    .game-design-title h3 {
+        font-size: 1.2rem; /* Updated font size */
+    }
+
+    .Web.design h5 {
+        font-size: 1.2rem; /* Updated font size */
+    }
+
+    .information-design-title h3 {
+        font-size: 1.2rem; /* Updated font size */
+    }
+
+    .pdf-link h2 {
+        font-size: 1rem; /* Updated font size */
     }
 }
-
-.user-flow {
-    /* Add styling for user flow container if needed */
-}
-
-.flow-images {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px; /* Add some margin between the images */
-}
-
-.flow-image {
-    width: 48%; /* Adjust width as needed */
-}
-
-.flow-image h3 {
-    text-align: center; /* Center the image titles */
-    font-size: 30px;
-}
-
 .caption {
-    font-size: 20px; /* Adjust font size as needed */
-    color: #777; /* Adjust color as needed */
-    margin-bottom: 10px; /* Space between caption and project */
-    text-align: center; /* Center align caption */
-    line-height: 1.5; /* Add line height for better readability */
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  
 }
