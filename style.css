@@ -1,3 +1,14 @@
+@media print {
+  body {
+      -webkit-print-color-adjust: exact;
+  }
+
+  img {
+      display: block; /* Ensures images are not hidden */
+      max-width: 100%; /* Optional: scales images to fit the page */
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700;900&display=swap');
 
 * {
@@ -7,7 +18,7 @@
 }
 
 body {
-    background-color:#2a2a2a;
+    background-color: #2a2a2a;
     opacity: 0;
     transition: opacity 3s;
 }
@@ -15,7 +26,6 @@ body {
 .hero {
     width: 100%;
     height: 100vh;
-
 }
 
 .nav {
@@ -56,88 +66,151 @@ ul a .active {
     gap: 6rem;
     margin-top: 70px;
     color: #f4637b;
-
 }
+
 main .cynthia {
     width: 500px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
     /* Set a maximum width if necessary */
 }
+
 /* CSS Styles */
 .portfolio-content {
     text-align: center;
 }
 
 .pdf-link a {
-            font-weight: bold;
-            color: red;
-        }
-        /* CSS Styles */
-        .project-title {
-           text-decoration: underline;
-            font-size: 40px; /* Adjust the font size as needed */
-            font-weight: bold;
-            position: absolute;
-            top: 900px; /* Adjust the top position as needed */
-            left: 10px; /* Adjust the left position as needed */
-            color: White; /* Adjust the color as needed */
-            z-index: 1; /* Ensure the title is above the image */
-        }
-        /* CSS Styles */
-      .game-design-title {
-          position: absolute;
-          bottom: -880px; /* Adjust as needed */
-          left: 10px; /* Adjust as needed */
-          z-index: 1;
-      }
+    font-weight: bold;
+    color: red;
+    font-size: 30px;
+}
 
-      .game-design-title h3 {
-          text-decoration: underline;
-          font-size: 40px; /* Adjust the font size as needed */
-          font-weight: bold;
-          color: #ffffff; /* Adjust the color as needed */
-          margin: 0;
-      }
+.project-title {
+
+    font-size: 30px; /* Adjust the font size as needed */
+    font-weight: bold;
+    position: absolute;
+    top: 950px; /* Adjust the top position as needed */
+    left: 40px; /* Adjust the left position as needed */
+    color: white; /* Adjust the color as needed */
+    z-index: 1; /* Ensure the title is above the image */
+}
+
+.game-design-title {
+    position: relative; /* Use relative positioning to contain the absolute positioning of the h3 */
+    margin-top: 10%; /* Adjust margin at the top */
+}
+
+.game-design-title h3 {
+    position: absolute; /* Use absolute positioning for precise control */
+    top: -45px; /* Adjust as needed */
+    left: 0; /* Align to the left */
+    font-size: 30px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #ffffff; /* Adjust the color as needed */
+    margin: 0; /* Remove default margin */
+    text-decoration: none; /* Remove any underlines */
+    z-index: 1; /* Ensure the title is above other elements */
+}
 
 
-      .video-section {
-          margin-top: 60px;
-          margin-bottom: 60px; /* Add margin bottom to create space between projects */
-      }
-
+.video-section {
+    margin-top: 10px;
+    margin-bottom: 200px; /* Add margin bottom to create space between projects */
+}
 
 .web-design {
-    margin-top: 50%; /* Adjust as needed */
+    margin-top: 50px; /* Adjust as needed */
 }
+
 .Web.design {
     position: relative;
-    width: 900px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the video horizontally */
+    width: 100%; /* Adjust as needed */
 }
 
 .Web.design h5 {
-    text-decoration: underline;
-    position: absolute;
-    bottom: 530px; /* Adjust as needed */
-    left: -380px; /* Adjust as needed */
-    margin: 0;
-    font-size: 40px; /* Adjust as needed */
+    position: absolute; /* Use absolute positioning for precise control */
+    top: -45px; /* Adjust as needed */
+    left: 0px; /* Align to the left */
+    margin: 0; /* Remove default margin */
+    font-size: 30px; /* Adjust as needed */
     font-weight: bold;
     color: #ffffff; /* Adjust as needed */
-    z-index: 1;
+    z-index: 1; /* Ensure the title is above other elements */
+    text-decoration: none; /* Remove underline */
 }
-.information-design-title{
-  margin-top: 10%;
+
+.Web.design iframe {
+    width: 900px; /* Set a fixed width for the video */
+    height: 506px; /* Set a fixed height for the video */
+}
+
+
+
+.information-design-title {
+    margin-top: 18%;
 }
 
 .information-design-title h3 {
-  text-decoration: underline;
-  position: absolute;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 40px;
-  bottom: -235%; /* Adjust as needed */
-  left: 10PX; /* Adjust as needed */
-  margin: 0;
-  z-index: 1;
+    position: absolute;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 30px;
+    bottom: -250%; /* Adjust as needed */
+    left: 50px; /* Adjust as needed */
+    margin: 0;
+    z-index: 1;
+}
 
+.project-section {
+    margin-bottom: 50px; /* Add space between projects */
+}
+
+.pdf-link h2 {
+    font-size: 24px; /* Increase font size for the "Click here for the full presentation" title */
+}
+
+@media screen and (max-width: 768px) {
+    .welcome, .project-title, .game-design-title, .information-design-title h3 {
+        font-size: 30px; /* Decrease font size for mobile */
+        text-decoration: none; /* Remove underline */
+        position: static; /* Center over projects */
+        margin: 10px auto; /* Center horizontally with some margin */
+    }
+    .portfolio-content .caption {
+        font-size: 30px; /* Caption font size */
+        color: #777; /* Caption color */
+        margin-bottom: 10px; /* Margin between caption and project */
+        text-align: center; /* Center align caption */
+    }
+}
+
+.user-flow {
+    /* Add styling for user flow container if needed */
+}
+
+.flow-images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Add some margin between the images */
+}
+
+.flow-image {
+    width: 48%; /* Adjust width as needed */
+}
+
+.flow-image h3 {
+    text-align: center; /* Center the image titles */
+    font-size: 30px;
+}
+
+.caption {
+    font-size: 20px; /* Adjust font size as needed */
+    color: #777; /* Adjust color as needed */
+    margin-bottom: 10px; /* Space between caption and project */
+    text-align: center; /* Center align caption */
+    line-height: 1.5; /* Add line height for better readability */
 }
